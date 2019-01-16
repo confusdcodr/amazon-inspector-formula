@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # vim: ft=sls
 
-{% from "template/map.jinja" import template with context %}
+{% from "amazon-inspector/map.jinja" import template with context %}
 
 template-config:
   file.managed:

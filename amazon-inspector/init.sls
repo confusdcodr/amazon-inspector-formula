@@ -1,7 +1,14 @@
 # -*- coding: utf-8 -*-
-# vim: ft=sls
+{%- set os_family = salt['grains.get']('os_family') %}
+
+{%- if os_family == 'Windows' %}
 
 include:
-  - template.install
-  - template.config
-  - template.service
+  - .windows
+
+{%- else %}
+
+include:
+  - .linux
+
+{%- endif %}
