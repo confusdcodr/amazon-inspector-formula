@@ -5,7 +5,7 @@ install_amazon_inspector:
   cmd.script:
     - name: amazon-inspector-agent-install.sh
     - source: {{ data.install_url }} 
-    - cwd: /tmp
+    - cwd: /root
     - shell:  /bin/bash
 
 start_amazon_inspector:
