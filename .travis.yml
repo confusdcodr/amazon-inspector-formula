@@ -17,7 +17,7 @@ matrix:
       language: sh
       python: 3.7
       before_install:
-        - choco install saltminion
+        - choco install saltminion --version 2018.3.3.3
         - export PATH="/c/salt:$PATH"
       install:
         - mkdir -p /c/salt/srv/salt
